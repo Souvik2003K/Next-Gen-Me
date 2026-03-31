@@ -1,49 +1,223 @@
+/* ─────────────────────────────────────────────────────────
+   globals.css  –  Terminal Portfolio  –  Souvik Moitra
+   ───────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Root tokens ─────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg          : #0a0a0a;
+  --bg-terminal : #0d0d0d;
+  --bg-title    : #111111;
+  --border      : #1e1e1e;
+  --font        : 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  --fs          : 14px;
+  --lh          : 1.7;
+  --error       : #ff5555;
+  --prompt-dim  : #555;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
+/* ── Base ────────────────────────────────────────────────── */
+html, body {
   height: 100%;
+  background: var(--bg);
+  color: #00ff41;
+  font-family: var(--font);
+  font-size: var(--fs);
+  line-height: var(--lh);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;            /* no outer scroll */
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* ── Page wrapper ────────────────────────────────────────── */
+.page-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
 }
 
-body {
-  min-height: 100%;
+/* ── Terminal shell ──────────────────────────────────────── */
+.terminal-wrapper {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 92vh;
   display: flex;
   flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px #1a1a1a,
+    0 20px 60px rgba(0, 0, 0, 0.8),
+    0 0 80px rgba(0, 255, 65, 0.04);
+  cursor: text;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
+/* ── Title bar ───────────────────────────────────────────── */
+.title-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--bg-title);
+  border-bottom: 1px solid var(--border);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.title-dots {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.title-label {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  color: #444;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+/* ── Terminal body ───────────────────────────────────────── */
+.terminal-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 24px 16px;
+  background: var(--bg-terminal);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+.terminal-body::-webkit-scrollbar {
+  width: 4px;
+}
+.terminal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+
+/* ── Command line ────────────────────────────────────────── */
+.cmd-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: var(--fs);
+  line-height: var(--lh);
+  margin-top: 10px;
+}
+
+.prompt {
+  color: var(--prompt-dim);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.cmd-text {
+  font-weight: 400;
+}
+
+/* ── Output / pre blocks ─────────────────────────────────── */
+.output-text,
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font);
+  font-size: var(--fs);
+  line-height: var(--lh);
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* ── Error ───────────────────────────────────────────────── */
+.error-text {
+  color: var(--error) !important;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font);
+  font-size: var(--fs);
+  line-height: var(--lh);
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* ── Input row ───────────────────────────────────────────── */
+.input-row {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+  flex-wrap: nowrap;
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font);
+  font-size: var(--fs);
+  line-height: var(--lh);
+  width: 100%;
+  min-width: 0;
+}
+
+/* ── Cursor blink ────────────────────────────────────────── */
+.cursor-blink {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+  opacity: 1;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Mobile adjustments ──────────────────────────────────── */
+@media (max-width: 600px) {
+  .page-root {
+    padding: 0;
+  }
+
+  .terminal-wrapper {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
+
+  :root {
+    --fs : 12px;
+  }
+
+  .title-label {
+    font-size: 11px;
   }
 }
