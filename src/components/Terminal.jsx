@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import TypewriterText from './TypewriterText';
 import {
@@ -300,9 +301,15 @@ export default function Terminal() {
       {/* ── Title Bar ─────────────────────────── */}
       <div className="title-bar">
         <div className="title-dots">
-          <span className="dot dot-red" />
-          <span className="dot dot-yellow" />
-          <span className="dot dot-green" />
+          <Link href="https://souvik-moitra-portfolio-v2.vercel.app/" className="home-link">
+            <span className="">🔴</span>
+          </Link>
+          <Link href="#" className="home-link">
+            <span className="">🟡</span>
+          </Link>
+          <Link href="#" className="home-link">
+            <span className="">🟢</span>
+          </Link>
         </div>
         <span className="title-label">souvik-portfolio — terminal</span>
       </div>
