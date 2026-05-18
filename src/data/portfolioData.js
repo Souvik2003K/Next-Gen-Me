@@ -52,14 +52,14 @@ export const skills = `
 
   Styling & Structure
   -------------------
-  HTML5  |  CSS3  |  SCSS  |  Tailwind CSS
-  Material UI  |  Bootstrap
+    HTML5    |     CSS3     |     SCSS     |  
+  Bootstrap  |  Material UI | Tailwind CSS
 
   Languages & Frameworks
   ----------------------
-  Python  |  JavaScript  |  TypeScript
-  ReactJS  |  Redux  |  NextJS  |  React Native
-  Angular  |  NodeJS  |  ExpressJS  |  .NET
+  Python   |  JavaScript  |  TypeScript
+  ReactJS  |    Redux     |    NextJS   |  React Native
+  Angular  |    NodeJS    |  ExpressJS  |  .NET
 
   Databases
   ---------
@@ -76,22 +76,47 @@ export const projectsList = `
 │                        PROJECTS                         │
 └─────────────────────────────────────────────────────────┘
 
-  7 projects found. Use  cd <n>  to view details.
+  8 projects found. Use  cd <n>  to view details.
 
-  [1]  RestorAI         — Open-source AI image restoration tool
-  [3]  NextGen Me       — My new Portfolio(Terminal version)
-  [2]  LearnUp          — Learning Management System
-  [4]  Editrix          — Rich text editor
-  [5]  DoneWithIt       — Marketplace for old items
-  [6]  AutoBiller       — console-based program generates bill
-  [7]  VaultX           — Console-based program for transactions
+  [1]  Portfolio-v2     — My Personal Portfolio v2
+  [2]  NextGenMe        — Portfolio Terminal Version
+  [3]  RestorAI         — Open-source AI image restoration tool
+  [4]  LearnUp          — Learning Management System
+  [5]  Editrix          — Rich text editor
+  [6]  DoneWithIt       — Marketplace for old items
+  [7]  AutoBiller       — console-based program generates bill
+  [8]  VaultX           — Console-based program for transactions
 
   Hint: cd RestorAI
 `;
 
 export const projectDetails = {
-  restorai: `
-[1] RestorAI — AI-Powered Image Restoration Platform
+portfolio: `
+[1] Portfolio-v2 — My Personal Portfolio
+────────────────────────────────────────────
+    Problem  : Outdated portfolio design and lack of
+               modern features to showcase skills and projects.
+    Solution : Redesigned the portfolio with a clean, responsive layout
+               and integrated interactive elements for a better user experience.
+    Stack    : ReactJS, ExpressJS, MongoDB, Replicate, RazorPay
+    Live     : https://souvik-moitra-portfolio-v2.vercel.app/
+    GitHub   : https://github.com/Souvik2003K/Portfolio-v2
+  `,
+
+nextgenme: `
+[2] NextGenMe — Portfolio Terminal Version
+────────────────────────────────────────────
+    Problem  : Lack of a modern, terminal-based portfolio
+               that showcases skills and projects effectively.
+    Solution : Developed a sleek, interactive terminal-based
+               portfolio with dynamic content and seamless navigation.
+    Stack    : ReactJS, ExpressJS, MongoDB, Replicate, RazorPay
+    Live     : https://next-gen-me.vercel.app/
+    GitHub   : https://github.com/Souvik2003K/NextGenMe
+  `,
+
+restorai: `
+[3] RestorAI — AI-Powered Image Restoration Platform
 ────────────────────────────────────────────────────
     Problem  : Restoring old or damaged images required
                manual effort, expertise, and expensive tools.
@@ -104,7 +129,7 @@ export const projectDetails = {
   `,
 
 learnup: `
-[2] LearnUp — Scalable Learning Management System
+[4] LearnUp — Scalable Learning Management System
 ────────────────────────────────────────────────
     Problem  : Lack of centralized platforms for managing
                courses, users, and secure transactions.
@@ -117,7 +142,7 @@ learnup: `
   `,
 
 donewithit: `
-[3] DoneWithIt — Cross-Platform Marketplace Application
+[5] DoneWithIt — Cross-Platform Marketplace Application
 ──────────────────────────────────────────────────────
     Problem  : Users lacked a simple platform to list and
                discover second-hand items efficiently.
@@ -130,7 +155,7 @@ donewithit: `
   `,
 
 editrix: `
-[4] Editrix — Browser-Based Rich Text Engine
+[6] Editrix — Browser-Based Rich Text Engine
 ───────────────────────────────────────────
     Problem  : Basic editors lacked flexibility for structured
                and styled content creation in-browser.
@@ -142,7 +167,7 @@ editrix: `
   `,
 
 autobiller: `
-[5] AutoBiller — Automated Console Billing System
+[7] AutoBiller — Automated Console Billing System
 ───────────────────────────────────────────────
     Problem  : Manual billing processes were inefficient and
                error-prone in small-scale systems.
@@ -155,7 +180,7 @@ autobiller: `
   `,
 
 vaultx: `
-[6] VaultX — Console-Based Banking Simulation System
+[8] VaultX — Console-Based Banking Simulation System
 ──────────────────────────────────────────────────
     Problem  : Understanding transactional systems and file
                persistence in banking workflows was limited.
@@ -248,16 +273,16 @@ export const resume = `
   Email        : souvikmoitra2003@gmail.com
   LinkedIn     : https://www.linkedin.com/in/souvik-moitra-7a7676222/
   GitHub       : https://github.com/Souvik2003K
-  Portfolio    : https://souvik-moitra-portfolio.vercel.app/
+  Portfolio    : https://souvik-moitra-portfolio-v2.vercel.app/
 
-  Education    :
+  Education :-
     B.Tech in Computer Science and Engineering
     JIS University, Kolkata (2021 – 2025)
 
     High School
     Kendriya Vidyalaya, Rourkela (2019 – 2021)
 
-  Experience   :
+  Experience :-
     Frontend Developer — LvlAlpha (Remote)
     Aug 2023 – Mar 2025
       • Built offline-first Casualty Management System
@@ -271,27 +296,27 @@ export const resume = `
       • Improved engagement via targeted campaigns
       • Analyzed performance metrics for optimization
 
-  Skills       :
-    Frontend   : ReactJS, NextJS, Angular, Redux
-    Backend    : NodeJS, ExpressJS, .NET
-    Languages  : JavaScript, Python
-    Styling    : HTML, CSS, Tailwind, SCSS, Bootstrap, MUI
-    Databases  : MongoDB, MySQL, PostgreSQL
-    Tools      : Git, GitHub, Postman, Figma, VS Code
-    Advanced   : Firebase, Appwrite, AWS, Docker, Prisma, JWT
+  Skills :-
+    Frontend      : ReactJS, NextJS, Angular, Redux
+    Backend       : NodeJS, ExpressJS, .NET
+    Languages     : JavaScript, Python
+    Styling       : HTML, CSS, Tailwind, SCSS, Bootstrap, MUI
+    Databases     : MongoDB, MySQL, PostgreSQL
+    Tools         : Git, GitHub, Postman, Figma, VS Code
+    Advanced      : Firebase, Appwrite, AWS, Docker, Prisma, JWT
 
-  Projects     :
-    • RestorAI — AI Image Restoration Platform
-    • LearnUp — Learning Management System
-    • DoneWithIt — Marketplace Mobile App
-    • Editrix — Rich Text Editor
-    • AutoBiller — Billing System
-    • VaultX — ATM Simulation
+  Projects :-
+    • Portfolio   — My Personal Portfolio v2
+    • NextGenMe   — Portfolio Terminal Version
+    • LearnUp     — Learning Management System
+    • DoneWithIt  — Marketplace Mobile App
+    • Editrix     — Rich Text Editor
+    • AutoBiller  — Billing System
+    • VaultX      — ATM Simulation
 
   Download Resume (PDF):
   https://drive.google.com/file/d/19WxDpmp5P_7ksn839gmcKrtxk4alooXe/view?usp=sharing
 
-  Last Updated : March 2026
 `;
 
 export const helpText = `
@@ -319,7 +344,7 @@ export const helpText = `
   cd projects          Projects (with links)
   cd experience        Work experience
   cd social            Social & contact links
-  cd resume            Resume download link
+  cd resume            Terminal version of resume
 
   TIPS
   ────
@@ -348,3 +373,5 @@ export function getSectionContent(section) {
   const map = { about, education, skills, experience, social, resume };
   return map[section] || null;
 }
+
+
